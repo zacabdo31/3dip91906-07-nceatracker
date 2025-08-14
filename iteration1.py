@@ -1,4 +1,4 @@
-#this program is a NCEA Assesment Tracker which will allow you to set 
+#this program is a NCEA Assesment Tracker which will allow you to set Deadlines for your internal/external, set credits, set due dates and completion status
 # Initialize storage
 # This will hold all assessments entered by the user.
 # Each assessment will be stored as a dictionary.
@@ -87,3 +87,4 @@ def main_menu():
             print("Invalid input. Please try again.\n")
 # Start the program
 main_menu()
+
