@@ -124,14 +124,14 @@ class AssessmentTrackerApp:
 
         #input credits
         tk.Label(self.root, text="Credits:").grid(row=2, column=0, sticky="w", padx=10)
-        credits_entry = tk.Entry(self.root)
+        credits_entry = tk.Spinbox(self.root, from_=1, to=31, width=5)
         credits_entry.grid(row=2, column=1, columnspan=2, pady=2)
 
         # Date Selection with Spinboxes
-        tk.Label(self.root, text="Due Date:").grid(row=3, column=0, sticky="w", padx=10)
+        tk.Label(self.root, text="Due Date D/M/Y:").grid(row=3, column=0, sticky="w", padx=10)
         day_spin = tk.Spinbox(self.root, from_=1, to=31, width=5)
         month_spin = tk.Spinbox(self.root, from_=1, to=12, width=5)
-        year_spin = tk.Spinbox(self.root, from_=2024, to=2030, width=8)
+        year_spin = tk.Spinbox(self.root, from_=2025, to=2030, width=8)
         day_spin.grid(row=3, column=1, sticky="w", pady=2)
         month_spin.grid(row=3, column=1, padx=55, pady=2)
         year_spin.grid(row=3, column=2, sticky="w", pady=2)
