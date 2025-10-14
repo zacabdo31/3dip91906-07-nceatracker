@@ -1,3 +1,5 @@
+#this program is a NCEA Assesment Tracker which will allow you to set Deadlines for your internal/external, set credits, set due dates and completion status
+#setting up GUI and the base/parent class for all the assesments being stored
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk

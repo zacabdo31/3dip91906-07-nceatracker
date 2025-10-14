@@ -1,4 +1,4 @@
-#this program is a NCEA Assesment Tracker which will allow you to set Deadlines for your internal/external, set credits, set due dates and completion status
+#this program is a NCEA Assesment Tracker which will allow you too add your NCEA results throughout the current year such assesments, upcoming ones and so on
 # Initialize storage
 # This will hold all assessments entered by the user.
 # Each assessment will be stored as a dictionary.
@@ -7,16 +7,12 @@ assessment_list = []
 def add_assessment():
     # Get name of the internal assessment
     name = input("Enter the name of the internal assessment: ")
-
-    # Get credit value, with input validation for integers
     try:
         # Get credit value, with input validation for integers
         credits = int(input("Enter the number of credits: "))
     except ValueError:
         print("Please enter a valid number for credits.")
         return  # Stop function if invalid number
-    
-
     # Get due date (no strict validation yet, free text)
     due_date = input("Enter the due date (e.g., 20 Aug 2025): ")
     # Get completion status (yes/no)
@@ -31,7 +27,6 @@ def add_assessment():
     # Add dictionary to the assessment list
     assessment_list.append(assessment)
     print("Assessment added successfully.\n")
-
 # Function to display all assessments
 def display_assessments():
     #Shows all assessments currently stored in a clear list format.
@@ -53,8 +48,6 @@ def calculate_credits():
         total_credits += a["credits"]
         if a["status"] == "yes":
             completed_credits += a["credits"]
-        else:
-            print('no completed credits')
     # Display results
     print(f"\nTotal credits: {total_credits}")
     print(f"Completed credits: {completed_credits}\n")
@@ -87,4 +80,3 @@ def main_menu():
             print("Invalid input. Please try again.\n")
 # Start the program
 main_menu()
-

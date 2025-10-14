@@ -1,11 +1,11 @@
+#this program is a NCEA Assesment Tracker which will allow you to set Deadlines for your internal/external, set credits, set due dates and completion status
+#setting up base base/parent class for all the assesments being stored
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
 from datetime import datetime
 
-# -------------------------
 # Parent Class
-# -------------------------
 class Assessment:
     """Base class representing a general assessment."""
     def __init__(self, name, credits, due_date, status, assessment_type):
@@ -77,9 +77,7 @@ class AssessmentManager:
             print(f"Error saving to file: {e}")
             return False #indicates failure
 
-# -------------------------
-# GUI Class
-# -------------------------
+# Gui Class
 class AssessmentTrackerApp:
     """
     This class creates the graphical interface for the program.
@@ -251,9 +249,7 @@ class AssessmentTrackerApp:
         else:
             messagebox.showerror("Error", "Failed to save data to file.")
 
-# -------------------------
-# RUN THE APP
-# -------------------------
+# run the app
 if __name__ == "__main__":
     root = tk.Tk()
     app = AssessmentTrackerApp(root)
